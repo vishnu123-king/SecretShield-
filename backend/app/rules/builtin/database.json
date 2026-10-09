@@ -1,0 +1,15 @@
+{
+  "id": "database-connection-string",
+  "name": "Database Connection String with Credentials",
+  "type": "database_credential",
+  "severity": "HIGH",
+  "confidence": 0.90,
+  "keywords": ["postgres://", "postgresql://", "mysql://", "mongodb://", "redis://"],
+  "patterns": [
+    "\\b(postgres(?:ql)?://[a-zA-Z0-9_.-]+:([^@\\s/\"']+)@[a-zA-Z0-9_.-]+(?::\\d+)?/[a-zA-Z0-9_.-]+)",
+    "\\b(mysql://[a-zA-Z0-9_.-]+:([^@\\s/\"']+)@[a-zA-Z0-9_.-]+(?::\\d+)?/[a-zA-Z0-9_.-]+)",
+    "\\b(mongodb(?:\\+srv)?://[a-zA-Z0-9_.-]+:([^@\\s/\"']+)@[a-zA-Z0-9_.-]+)",
+    "\\b(redis://:[^@\\s/\"']+@[a-zA-Z0-9_.-]+(?::\\d+)?)"
+  ],
+  "remediation": "1. Change the database user's password immediately.\n2. Update connection configurations across running services.\n3. Move connection strings to environment variables or secret vaults."
+}

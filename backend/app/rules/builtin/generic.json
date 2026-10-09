@@ -1,0 +1,12 @@
+{
+  "id": "generic-secret-assignment",
+  "name": "Generic Secret or Password Assignment",
+  "type": "generic_secret",
+  "severity": "HIGH",
+  "confidence": 0.70,
+  "keywords": ["password", "secret", "api_key", "token", "access_token", "client_secret", "auth_token"],
+  "patterns": [
+    "(?i)\\b(?:password|passwd|pwd|api_key|apikey|secret|client_secret|access_token|auth_token)\\s*[:=]\\s*['\"]([^'\"\\s]{8,})['\"]"
+  ],
+  "remediation": "1. Evaluate whether the assigned value is an active production secret.\n2. If sensitive, rotate and extract to environment variable or vault."
+}

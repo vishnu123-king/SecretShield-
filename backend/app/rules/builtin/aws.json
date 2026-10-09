@@ -1,0 +1,12 @@
+{
+  "id": "aws-access-key-id",
+  "name": "AWS Access Key ID",
+  "type": "cloud_credential",
+  "severity": "CRITICAL",
+  "confidence": 0.95,
+  "keywords": ["AKIA", "ASIA", "aws_access_key_id", "AWS_ACCESS_KEY"],
+  "patterns": [
+    "\\b((?:AKIA|ASIA)[0-9A-Z]{16})\\b"
+  ],
+  "remediation": "1. Revoke the exposed AWS Access Key in IAM console immediately.\n2. Invalidate any active sessions.\n3. Audit CloudTrail for unauthorized API calls.\n4. Rotate to IAM Roles or AWS Secrets Manager."
+}

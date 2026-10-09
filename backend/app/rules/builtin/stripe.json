@@ -1,0 +1,13 @@
+{
+  "id": "stripe-api-key",
+  "name": "Stripe Live/Secret Key",
+  "type": "payment_credential",
+  "severity": "CRITICAL",
+  "confidence": 0.95,
+  "keywords": ["sk_live_", "rk_live_", "sk_test_"],
+  "patterns": [
+    "\\b(sk_live_[0-9a-zA-Z]{24,34})\\b",
+    "\\b(rk_live_[0-9a-zA-Z]{24,34})\\b"
+  ],
+  "remediation": "1. Roll the restricted or secret key in Stripe Dashboard > Developers > API Keys.\n2. Review Stripe audit events."
+}

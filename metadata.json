@@ -1,0 +1,8 @@
+{
+  "name": "Remix SecretShield - AI-Assisted Git Security Observatory",
+  "description": "Enterprise-grade Git repository security intelligence platform for discovering sensitive information, tracing exposure spread, and preventing credential leaks using deterministic signatures and Gemini AI analysis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

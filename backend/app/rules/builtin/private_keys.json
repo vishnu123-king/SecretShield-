@@ -1,0 +1,12 @@
+{
+  "id": "private-key",
+  "name": "Asymmetric Private Key",
+  "type": "private_key",
+  "severity": "CRITICAL",
+  "confidence": 0.99,
+  "keywords": ["BEGIN RSA PRIVATE KEY", "BEGIN OPENSSH PRIVATE KEY", "BEGIN EC PRIVATE KEY", "BEGIN PRIVATE KEY", "BEGIN PGP PRIVATE KEY"],
+  "patterns": [
+    "-----BEGIN (?:RSA|DSA|EC|OPENSSH|PGP)?\\s*PRIVATE KEY-----"
+  ],
+  "remediation": "1. Treat the key pair as compromised.\n2. Generate a new key pair.\n3. Replace public keys on all servers/authorities.\n4. Remove private key file from repository and commit history."
+}

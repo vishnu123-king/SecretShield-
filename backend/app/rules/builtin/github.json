@@ -1,0 +1,14 @@
+{
+  "id": "github-pat",
+  "name": "GitHub Personal Access Token",
+  "type": "github_token",
+  "severity": "CRITICAL",
+  "confidence": 0.98,
+  "keywords": ["ghp_", "gho_", "ghu_", "ghs_", "ghr_"],
+  "patterns": [
+    "\\b(ghp_[a-zA-Z0-9]{36})\\b",
+    "\\b(github_pat_[a-zA-Z0-9]{22}_[a-zA-Z0-9]{59})\\b",
+    "\\b(gho_[a-zA-Z0-9]{36})\\b"
+  ],
+  "remediation": "1. Revoke token in GitHub Settings > Developer Settings > Personal Access Tokens.\n2. Audit GitHub audit logs for recent repository or org actions.\n3. Regenerate and store in GitHub Actions Secrets."
+}

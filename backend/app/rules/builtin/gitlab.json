@@ -1,0 +1,12 @@
+{
+  "id": "gitlab-pat",
+  "name": "GitLab Personal Access Token",
+  "type": "gitlab_token",
+  "severity": "CRITICAL",
+  "confidence": 0.95,
+  "keywords": ["glpat-", "gitlab"],
+  "patterns": [
+    "\\b(glpat-[a-zA-Z0-9_\\-]{20,25})\\b"
+  ],
+  "remediation": "1. Revoke the token immediately in GitLab Profile > Access Tokens.\n2. Inspect GitLab security events for suspicious activity."
+}
